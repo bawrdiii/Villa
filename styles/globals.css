@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/Vazir.woff2");
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "vazir", Arial, Helvetica, sans-serif;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  text-align: justify;
+  margin: 0.85rem;
+}
+
+/* Styles for Nav */
+.logoimage {
+  width: 100px;
+  background-color: #e0e0e0e0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.icon {
+  font-size: 1.5rem;
+  margin-top: 0.7em;
+  cursor: pointer;
+}
+.container-nav {
+  margin: auto;
+  overflow: hidden;
+  background-color: #ffa50075;
+  color: #444444e0;
+  height: 105px;
+}
+.dflex-nav {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 5px 0;
+}
+
+.uls {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.uls li {
+  list-style: none;
+  padding: 1rem;
+}
+.uls li:hover {
+  background-color: #cd9b1d;
+  border-radius: 30px 10px;
+}
+
+.uls li:nth-child(3) {
+  padding-right: 0;
+}
+.uls li:nth-child(3):hover {
+  padding: 15px 10px;
+}
+/* End Of navbar Styles */
+
+/* Waves */
+.wave2 {
+  margin-top: -8px;
+}
+.forwave {
+  margin-top: -110px;
+}
+
+/*main Section */
+.container-main {
+  direction: ltr;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 5px;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(1, 1fr);
+}
+.forp {
+  width: 50%;
+  height: 300px;
+  direction: rtl;
+}
+.forp p {
+  line-height: 2;
+}
+/* End Of Main Section */
+
+/* Start of Favorites */
+.container-fav {
+  width: 80%;
+  margin: auto;
+}
+.favorites {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+.figure {
+  width: 85%;
+  padding: 0.5rem 0.3rem;
+  margin: 0;
+  text-align: center;
+  background-color: rgb(195, 195, 195);
+  cursor: pointer;
+}
+
+.figure img {
+  width: 100%;
+  height: 247.99px;
+}
+.container-fav h1 {
+  color: #333;
+  font-weight: 550;
+  padding-right: 35px;
+}
+.figure figcaption {
+  font-weight: 800;
+}
+/* End of figure */
+
+/* Carousel */
+
+.forvip1 {
+  margin-top: 2em;
+}
+.forvip1 h3 {
+  padding: 1em;
+}
+
+.carousel {
+  direction: ltr;
+  height: 480px;
+  margin: auto !important;
+}
+.carousel-status {
+  display: none;
+}
+/* Calendar Styles */
+.calendar {
+  margin-top: 4em !important;
+  background-color: #e0e0e0e0 !important;
+}
+.calendar__weekdays {
+  color: #000 !important;
+}
+.footer-calendar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+}
+.calendar-footer-btn {
+  border: #0fbcf9;
+  color: #fff;
+  background-color: rgb(15, 188, 249);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem !important;
+  cursor: pointer;
+}
+.calendar-footer-btn-submit {
+  padding: 1rem 2rem !important;
+  background-color: #228b22;
+  outline: none;
+  border: #228b22;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.calendar-footer-btn,
+.calendar-footer-btn-submit {
+  font-size: 0.9rem !important;
+}

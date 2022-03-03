@@ -1,0 +1,115 @@
+vip1 component Before edit:
+import { useEffect } from "react";
+
+import Navbar from "../../Components/Navbar/navbar";
+
+import DatePicker from "../../Components/DatePicker/datepicker";
+
+import { Carousel } from "react-responsive-carousel";
+
+const vip1 = () => {
+
+  useEffect(() => {
+    document.querySelectorAll(".carousel").forEach((carousel) => {
+      const items = carousel.querySelectorAll(".carousel-item");
+      const buttonsHtml = Array.from(items, () => {
+        return `<span class="carousel-btn"></span>`;
+      });
+      carousel.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div class="carousel-nav"> 
+      ${buttonsHtml.join("")}
+      </div>
+      `
+      );
+      const buttons = carousel.querySelectorAll(".carousel-btn");
+      buttons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+          // Unselect All the items
+          items.forEach((item) => {
+            item.classList.remove("carousel-item-selected");
+            buttons.forEach((button) =>
+              button.classList.remove("carousel-btn-selected")
+            );
+
+            items[i].classList.add("carousel-item-selected");
+            items[i].classList.add("show");
+            button.classList.add("carousel-btn-selected");
+          });
+        });
+      });
+    });
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <section className="forvip1">
+        <h3>اجاره ی ویلای وی آی پی 1 </h3>
+        <div className="carousel">
+          <div className="carousel-item carousel-item-selected">
+            <img src="/images/vip 1/vip 1.jpeg" alt="Picture of vip1" />
+          </div>
+          <div className="carousel-item">
+            <img src="/images/vip 1/vip 2.jpeg" alt="Picture of vip1" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <DatePicker />
+      </section>
+    </>
+  );
+
+};
+export default vip1;
+
+
+
+
+
+
+
+
+
+styles: 
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.carousel-item {
+  height: 485px;
+  padding: 1em;
+  display: none;
+}
+.carousel-item-selected {
+  display: block;
+}
+.carousel-nav {
+  position: absolute;
+  width: 100%;
+  padding: 20px 0;
+  bottom: 0;
+}
+.show {
+  transition: transform 0.6s ease-in-out;
+}
+.carousel-btn {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: rgba(40, 40, 40, 0.2);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-btn-selected {
+  background-color: rgba(40, 40, 40, 0.5);
+}
+.carousel-item img {
+  width: 800px;
+  height: 90%;
+}

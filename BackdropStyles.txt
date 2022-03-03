@@ -1,0 +1,58 @@
+/*  */
+
+
+/* Btns Styles */
+.btn-c {
+  background-color: #de2f2f;
+  color: #fff;
+  font: inherit;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.8em;
+  outline: none;
+  border-radius: 0.5rem;
+}
+.btn-s {
+  background-color: #388e3c;
+  color: #fff;
+  font: inherit;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.8em;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+/* backDrop Styles  */
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 300;
+  background: #ffffff;
+  width: 25%;
+  border: 1px solid #e0e0e0e0;
+  border-radius: 5px;
+  padding: 16px;
+  left: 38%;
+  top: 25%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.5s ease-out;
+}
+@media (max-width: 60rem) {
+  .modal {
+    width: 30%;
+    left: 35%;
+  }
+}
+Styles For backdrop
